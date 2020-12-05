@@ -1,0 +1,39 @@
+/* .example-card {
+    max-width: 500px;
+    margin-top: 10px;
+    top: 50px;
+    left: 300px;
+    width: 500px;
+    border-style: groove;
+    height: fit-content;
+    border-radius: 10px;
+} */
+
+.example-card {
+    max-width: 500px;
+    margin-top: 10px;
+    top: 50px;
+    left: 40px;
+    width: fit-content;
+    border-style: groove;
+    height: fit-content;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#bt1 {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwMDAwMCI+CiAgICA8cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDBWMHoiLz4KICAgIDxwYXRoIGQ9Ik02IDE5YzAgMS4xLjkgMiAyIDJoOGMxLjEgMCAyLS45IDItMlY3SDZ2MTJ6bTIuNDYtNy4xMmwxLjQxLTEuNDFMMTIgMTIuNTlsMi4xMi0yLjEyIDEuNDEgMS40MUwxMy40MSAxNGwyLjEyIDIuMTItMS40MSAxLjQxTDEyIDE1LjQxbC0yLjEyIDIuMTItMS40MS0xLjQxTDEwLjU5IDE0bC0yLjEzLTIuMTJ6TTE1LjUgNGwtMS0xaC01bC0xIDFINXYyaDE0VjR6Ii8+CiAgICA8cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+Cjwvc3ZnPgo=);
+}
+
+#bt2 {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwMDAwMCI+CiAgICA8cGF0aCBkPSJNMTkgNGgtMy41bC0xLTFoLTVsLTEgMUg1djJoMTR6TTYgN3YxMmMwIDEuMS45IDIgMiAyaDhjMS4xIDAgMi0uOSAyLTJWN0g2em04IDd2NGgtNHYtNEg4bDQtNCA0IDRoLTJ6Ii8+CiAgICA8cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+Cjwvc3ZnPgo=);
+    size: 20px;
+}
+
+.try {
+    display: none;
+}
+
+.example-card:hover .try {
+    display: inline-block;
+}

@@ -1,0 +1,68 @@
+<div class="container" class="row">
+
+
+    <mat-card class="col-sm-6" class="example-card" *ngFor="let an of notes; let i= index">
+
+        <!-- <div *ngIf="an.DS !== null">
+            <img mat-card-image width="100px" height="200px" [src]=DS />
+        </div> -->
+        <div *ngIf="an.myimage && an.myimage!== ''">
+            <img mat-card-image width="100px" height="300px" [src]=an.myimage />
+        </div>
+
+        <label for="dialog">
+        <mat-card-header>
+            <mat-card-title>
+                <h4>{{an.title}}</h4>
+
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                {{an.body}}
+            </p>
+        </mat-card-content>
+        </label>
+        <div class="try">
+            <mat-card-actions class="btnfr">
+
+                <div class="btn-group">
+                    <a class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="bt1" class=" mybuttonoverlap  btn"> </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+
+                        <button class="dropdown-item" type="button">Reminder</button>
+                        <button class="dropdown-item" type="button">Later Today</button>
+                        <button class="dropdown-item" type="button">Tomarrow</button>
+                        <button class="dropdown-item" type="button">Next week</button>
+                        <button class="dropdown-item" type="button">Home</button>
+                    </div>
+                </div>
+                <button id="dialog" mat-button style="display: none;" (click)="openDialog(an)">Open dialog</button>
+                <mat-icon id="bt2"></mat-icon>
+
+                <!-- <input ejs-colorpicker type="color" style="display: none;" id="colorpicke1r" /> -->
+
+                <input type="color" (click)="colorpop()" style="display: none;" id="color1">
+                <label for="color1"><mat-icon  id="bt3"></mat-icon></label>
+
+                <mat-icon id="bt4"></mat-icon>
+                <mat-icon (click)="archiveNote(an)" id="bt5"></mat-icon>
+
+
+
+                <div class="btn-group">
+                    <a class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="bt6" class=" mybuttonoverlap  btn"> </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item" (click)="deleteNote(an) " type="button">Delete Note</button>
+                        <button class="dropdown-item" type="button">Add label</button>
+                        <a> <button class="dropdown-item" (click)="drawing()" type="button">Add drawing</button></a>
+                        <button class="dropdown-item" (click)="copy(an)" type="button">Make a copy</button>
+                        <button class="dropdown-item" type="button">show checkboxes</button>
+                    </div>
+                </div>
+                <mat-icon id="pin"></mat-icon>
+            </mat-card-actions>
+
+        </div>
+    </mat-card>
+</div>

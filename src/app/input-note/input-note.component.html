@@ -1,0 +1,56 @@
+<div class="container">
+
+    <form #noteForm="ngForm" (ngSubmit)="saveNote()">
+        <mat-accordion>
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <div class="form-group" style="margin-top: 30px;">
+
+                            <input type="text" id="title" name="title" [(ngModel)]="note.title" style="box-shadow: none; border: none;" class="form-control" placeholder="Title">
+                        </div>
+                        <div class="form-group">
+                            <!-- <img [src]="myimage" name="myimage" [(ngModel)]="noteForm.value.myimage" id="pic1" width="100px" height="100px"  alt="" /> -->
+                            <img [src]="myimage" name="myimage" id="pic1" width="100px" height="100px" alt="" style="margin-left: 90px;" />
+                        </div>
+                    </mat-panel-title>
+                    <mat-icon id="btn1" mat-list-icon></mat-icon>
+                    <mat-icon id="btn2" mat-list-icon></mat-icon>
+                    <mat-icon id="btn3" mat-list-icon></mat-icon>
+
+                </mat-expansion-panel-header>
+                <div class="form-group">
+
+                    <input type="text" id="body" width="200px" name="body" [(ngModel)]="note.body" style="box-shadow: none; border: none; " class="form-control" placeholder="Take a Note...">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Add</button>
+
+                <mat-icon id="bt1" mat-list-icon></mat-icon>
+                <mat-icon id="bt2" mat-list-icon></mat-icon>
+                <mat-icon id="bt3" mat-list-icon></mat-icon>
+
+
+                <label for="pic"> <mat-icon  id="bt4" mat-list-icon></mat-icon></label>
+
+                <!-- <input type="file" id="pic" style="display: none;" name="myimage" [(ngModel)]="note.myimage" (change)="onChange($event)" name="myimage" /> -->
+                <input type="file" id="pic" style="display: none;" (change)="onChange($event)" name="myimage" />
+                <mat-icon id="bt5" mat-list-icon></mat-icon>
+                <!-- <mat-icon id="bt6" mat-list-icon></mat-icon> -->
+
+                <div class="btn-group ">
+                    <a class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="bt6" class=" mybuttonoverlap  btn"> </a>
+                    <div class="dropdown-menu dropdown-menu-right" style="padding-top: initial; background-position: top;">
+                        <button class="dropdown-item" type="button">Add label</button>
+                        <button class="dropdown-item" type="button">Add drawing</button>
+                        <button class="dropdown-item" type="button">show checkboxes</button>
+                    </div>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </form>
+</div>
+{{noteForm.value|json}}
+
+<!-- {{note| json}} -->
+<app-note-card></app-note-card>

@@ -1,0 +1,91 @@
+<div class="container" class="row">
+
+
+    <mat-card class="col-sm-6" class="example-card" *ngFor="let an of ANote">
+
+        <div *ngIf="an.myimage && an.myimage!== ''">
+            <img mat-card-image width="100px" height="300px" [src]=an.myimage />
+        </div>
+
+        <mat-card-header>
+            <mat-card-title>
+                <h5>{{an.title}}</h5>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                {{an.body}}
+            </p>
+        </mat-card-content>
+        <div class="try">
+            <mat-card-actions class="btnfr">
+                <!-- <button mat-button>Edit</button>
+        <button mat-button>SHARE</button>-->
+
+
+
+                <div class="btn-group">
+                    <a class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="bt1" class=" mybuttonoverlap  btn"> </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+
+                        <button class="dropdown-item" type="button">Add label</button>
+                        <button class="dropdown-item" type="button">Add drawing</button>
+                        <button class="dropdown-item" type="button">Make a copy</button>
+                        <button class="dropdown-item" type="button">show checkboxes</button>
+                    </div>
+                </div>
+
+
+
+                <mat-icon id="bt2"></mat-icon>
+
+
+                <div class="btn-group">
+                    <a class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false" id="bt3"> </a>
+                    <div class="dropdown-menu " style="box-shadow: none;">
+
+                        <button class="dropdown-item"><mat-icon style="color: rgb(173, 89, 89); margin-right: 2x;">circle</mat-icon><mat-icon  style="color: yellowgreen;margin-right: 2x;">circle</mat-icon><mat-icon style="color: red;">circle</mat-icon> <mat-icon style="color:darkgreen">circle</mat-icon>  </button>
+                        <button class="dropdown-item"> <mat-icon style="color: violet;">circle</mat-icon><mat-icon style="color: teal;">circle</mat-icon>  </button>
+                        <button class="dropdown-item"> <mat-icon style="color: blue;">circle</mat-icon>  </button>
+                        <mat-icon style="color: cadetblue">circle</mat-icon>
+                        <mat-icon style="color: cyan;">circle</mat-icon>
+                        <mat-icon style="color:blueviolet">circle</mat-icon>
+                        <mat-icon style="color: brown;">circle</mat-icon>
+                        <mat-icon style="color: royalblue;">circle</mat-icon>
+                    </div>
+                </div>
+
+
+
+                <span style="background-color:ejs-colorpicker;"><input ejs-colorpicker type="color" style="display: none;" id="colorpicker" />`</span>
+
+                <label for="colorpicker"> <mat-icon  id="bt4"></mat-icon></label>
+
+                <mat-icon (click)="Unarchive(an)" id="bt5"></mat-icon>
+
+                <div class="btn-group">
+                    <a class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="bt6" class=" mybuttonoverlap  btn"> </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item" (click)="DeleteArchive(an)" type="button">Delete Note</button>
+                        <button class="dropdown-item" type="button">Add label</button>
+                        <button class="dropdown-item" type="button">Add drawing</button>
+                        <button class="dropdown-item" type="button">Make a copy</button>
+                        <button class="dropdown-item" type="button">show checkboxes</button>
+                    </div>
+                </div>
+                <mat-icon id="pin"></mat-icon>
+            </mat-card-actions>
+
+
+            <!-- <input type="file" id="pic" style="display: none;" name="image" (change)="fileProgress($event)" /> -->
+
+            <!-- <div *ngIf="fileUploadProgress">
+                Upload progress: {{ fileUploadProgress }}
+            </div> -->
+
+
+        </div>
+
+
+    </mat-card>
+</div>
